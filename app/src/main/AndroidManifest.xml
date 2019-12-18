@@ -3,26 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.czh.vcardmaker">
 
-    <uses-permission android:name="android.permission.NFC" />
-
-    <!-- 要求当前设备必须要有NFC芯片 -->
+    <uses-permission android:name="android.permission.NFC" /> <!-- 要求当前设备必须要有NFC芯片 -->
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_main_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:label="隐私政策"></activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="关于" />
+        <activity
+            android:name=".ImageActivity"
+            android:label="赞赏码" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

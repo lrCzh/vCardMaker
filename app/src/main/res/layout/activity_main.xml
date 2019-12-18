@@ -9,14 +9,14 @@
         android:layout_height="96dp"
         android:gravity="center"
         android:text="完善信息并点击确定按钮后\n请将NFC标签或者贴纸靠近手机背面"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp" />
+        android:textColor="#424242"
+        android:textSize="15sp" />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.5dp"
         android:layout_below="@+id/textView"
-        android:background="@color/colorPrimary" />
+        android:background="#424242" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,7 +31,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="24dp"
-            android:paddingEnd="24dp">
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,8 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="姓名："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_name"
@@ -54,7 +56,8 @@
                     android:imeOptions="actionNext"
                     android:inputType="textPersonName"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -67,8 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="号码："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_phone"
@@ -78,7 +81,8 @@
                     android:imeOptions="actionNext"
                     android:inputType="phone"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -91,8 +95,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="邮箱："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_email"
@@ -102,7 +106,8 @@
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -115,8 +120,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="住址："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_address"
@@ -126,7 +131,8 @@
                     android:imeOptions="actionNext"
                     android:inputType="textPostalAddress"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,8 +145,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="公司："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_company"
@@ -150,7 +156,8 @@
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -163,8 +170,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="网址："
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/et_website"
@@ -174,19 +181,20 @@
                     android:imeOptions="actionDone"
                     android:inputType="textWebEditText"
                     android:maxLines="1"
-                    android:textColorHint="@color/colorPrimary" />
+                    android:textColor="#424242"
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="36dp"
                 android:layout_marginBottom="24dp"
                 android:background="@drawable/btn_bg"
                 android:text="确定"
                 android:textColor="#ffffff"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.czh.vcardmaker;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +15,8 @@ import android.nfc.tech.Ndef;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -97,14 +100,8 @@ public class MainActivity extends AppCompatActivity {
         if (mNfcAdapter == null) {
             nonSupport();
         }
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (mNfcAdapter != null && !mNfcAdapter.isEnabled()) {
-            hintOpenNfc();
-        }
+        description();
     }
 
     public void onNewIntent(Intent intent) {
@@ -140,6 +137,26 @@ public class MainActivity extends AppCompatActivity {
                 }).create();
 
         nonSupportDialog.show();
+    }
+
+    /**
+     * 弹对话框说明应用程序用途
+     */
+    private void description() {
+        AlertDialog descriptionDialog = new AlertDialog.Builder(this)
+                .setTitle("Tip")
+                .setMessage(R.string.description)
+                .setCancelable(false)
+                .setPositiveButton("知道了", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (mNfcAdapter != null && !mNfcAdapter.isEnabled()) {
+                            hintOpenNfc();
+                        }
+                    }
+                }).create();
+
+        descriptionDialog.show();
     }
 
 
@@ -242,5 +259,21 @@ public class MainActivity extends AppCompatActivity {
                 }).create();
 
         dataLackDialog.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.about) {
+            startActivity(new Intent(MainActivity.this, AboutActivity.class));
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
     }
 }

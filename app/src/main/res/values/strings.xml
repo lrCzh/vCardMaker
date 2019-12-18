@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">NFC电子名片制作</string>
+    <string name="app_name">NFC电子名片制作器</string>
+    <string name="about">\u3000\u3000这个小程序来源于在校期间的一个课设作业，是关于NFC的一些应用。我就做了这么个小东西，一直丢在硬盘里吃灰，后来删东西的时候看见，觉得还有点儿用，就稍微整理一下，做成一个小程序。如果能够帮到你的话，那再好不过了。</string>
+    <string name="description">\u3000\u3000这是一个简单的电子名片制作器，利用手机的NFC将个人信息写入NFC标签。之后，就可以拿这张NFC标签贴到具有NFC功能（NFC记得打开）的手机背面，即可将NFC标签中的个人信息保存到通讯录中。\n\n注意！！！\n\n\u3000\u3000使用程序向NFC标签写入数据时，会清除原有数据，请谨慎考虑再进行使用！</string>
+    <string name="privacy_policy">\u3000\u3000NFC电子名片制作器（下文简称为“本APP”）是一款十分简约纯粹的应用程序，无需任何相关权限。\n\n\u3000\u3000我们向您保证，在任何情况下，本APP都不会窃取或纪录有关您的任何隐私或敏感信息。</string>
 </resources>
